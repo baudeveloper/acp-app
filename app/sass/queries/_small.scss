@@ -1,0 +1,35 @@
+// MEDIA QUERY (SMALL SCREENS ONLY)
+// Check this link for more information: http://v4-alpha.getbootstrap.com/layout/overview/#responsive-breakpoints
+// 36rem = 576px
+
+/*
+TABLE OF CONTENTS:
+1. SITE CALLOUT [HOME PAGE ONLY]
+2. SITE NAVIGATION [UNIVERSAL]
+*/
+
+// 1. SITE CALLOUT [HOME PAGE ONLY]
+.site-callout {
+  height: 20rem;
+  h2 {
+    @include font-size(40);
+  }
+  h3 {
+    @include font-size(30);
+  }
+  span {
+    @include font-size(18);
+  }
+}
+
+// 2. SITE NAVIGATION PRIMARY [UNIVERSAL]
+.site-navigation {
+  &-lists {
+    padding-top: 3.6rem;
+  }
+  .navbar-brand {
+    img {
+      max-width: 120px;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+// MODULE.scss
+
+/*
+TABLE OF CONTENTS:
+1. CAROUSELS [HOME PAGE ONLY]
+*/
+
+// 1. CAROUSELS [HOME PAGE ONLY]
+// SITE SLIDER CAROUSEL
+.carousel-slider {
+  height: 30rem;
+  .carousel-navigation {
+    display: none;
+  }
+  .carousel-item-img {
+    display: none;
+  }
+  .carousel-inner {
+    height: 100%;
+  }
+  .carousel-item {
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+  }
+  .carousel-caption {
+    position: relative;
+    left: 1rem;
+    right: 1rem;
+    bottom: auto;
+    margin: auto;
+    padding-top: 13rem;
+    padding-bottom: 1rem;
+    max-width: 1024px;
+    text-align: left;
+  }
+}
+// SITE CATEGORY CAROUSEL
+.carousel-category {
+  align-items: center;
+  .carousel-navigation {
+    display: none;
+  }
+  .carousel-indicators {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    margin: auto;
+    padding: 0 0 0 2rem;
+    flex-direction: column;
+  }
+  .carousel-list-item {
+    position: relative;
+    flex: 0 1 auto;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 1rem;
+    text-indent: inherit;
+    background: none;
+    line-height: normal;
+    font-family: "Overpass-Regular";
+    &:hover {
+      cursor: pointer;
+    }
+    &:before {
+      display: none;
+    }
+    &:after {
+      display: none;
+    }
+    &-img {
+      float: left;
+      margin-right: 1.5rem;
+    }
+    &-title {
+      overflow: hidden;
+      color: $yellow-AA;
+      @include font-size(30);
+    }
+    &-content {
+      overflow: hidden;
+      color: $black;
+      @include font-size(16);
+      margin-bottom: 0;
+    }
+    &-link {
+      color: $yellow-AA;
+      @include font-size(16);
+      text-decoration: underline;
+    }
+    &.active {
+      background: $yellow-AB;
+      &:before {
+        display: inline-block;
+        top: 35%;
+        left: -20px;
+        width: 0;
+        height: 0;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-right: 20px solid $yellow-AB;
+      }
+    }
+  }
+}

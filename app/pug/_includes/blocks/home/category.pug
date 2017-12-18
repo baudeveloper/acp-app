@@ -1,0 +1,41 @@
+section.site-category(role="complementary")
+  .container
+    #carouselCategory.carousel.slide.row.carousel-category(data-ride='carousel')
+      .site-category-column.site-category-column-primary
+        .carousel-inner
+          .carousel-item.active
+            img.carousel-item-img(src="images/category-thumb.png", alt="Image of Operations", role="img")
+          .carousel-item
+            img.carousel-item-img(src="images/category-thumb.png", alt="Image of Compliance", role="img")
+          .carousel-item
+            img.carousel-item-img(src="images/category-thumb.png", alt="Image of Finance", role="img")
+      .site-category-column.site-category-column-secondary
+        ol.carousel-indicators(role="list")
+          li.carousel-list-item.active(data-target='#carouselCategory', data-slide-to='0', role='listitem')
+            .carousel-list-item-wrap
+              img.carousel-list-item-img(src="images/category-operations.png", alt="Image of Operations", role="img")
+              h2.carousel-list-item-title(role="heading") Operations
+              p.carousel-list-item-content
+                | Our operations department does all of those amazing things.&nbsp;
+                a.carousel-list-item-link(href="operations.html", role="link") Learn More
+          li.carousel-list-item(data-target='#carouselCategory', data-slide-to='1', role='listitem')
+            .carousel-list-item-wrap
+              img.carousel-list-item-img(src="images/category-compliance.png", alt="Image of Compliance", role="img")
+              h2.carousel-list-item-title(role="heading") Compliance
+              p.carousel-list-item-content
+                | Our operations department does all of those amazing things.&nbsp;
+                a.carousel-list-item-link(href="compliance.html", role="link") Learn More
+          li.carousel-list-item(data-target='#carouselCategory', data-slide-to='2', role='listitem')
+            .carousel-list-item-wrap
+              img.carousel-list-item-img(src="images/category-finance.png", alt="Image of Finance", role="img")
+              h2.carousel-list-item-title(role="heading") Finance
+              p.carousel-list-item-content
+                | Our operations department does all of those amazing things.&nbsp;
+                a.carousel-list-item-link(href="finance.html", role="link") Learn More
+        .carousel-navigation
+          a.carousel-control.carousel-control-prev(href='#carouselCategory', role='button', data-slide='prev', aria-label="Previous")
+            i.fa.fa-chevron-left(aria-hidden='true')
+            span.sr-only Previous
+          a.carousel-control.carousel-control-next(href='#carouselCategory', role='button', data-slide='next', aria-label="Next")
+            i.fa.fa-chevron-right(aria-hidden='true')
+            span.sr-only Next

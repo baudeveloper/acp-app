@@ -1,0 +1,58 @@
+// BASE.scss
+
+/*
+TABLE OF CONTENTS:
+1. FONT MIXIN VARS [UNIVERSAL]
+2. FONT WEIGHTS VARS [UNIVERSAL]
+3. SELECTION COLOR DECLARATION [UNIVERSAL]
+4. MEDIA QUERIES VARS [UNIVERSAL]
+5. COLOR VARS [UNIVERSAL]
+*/
+
+// 1. FONT MIXIN VARS [UNIVERSAL]
+@mixin font-size($sizeValue: 16) {
+  font-size: ($sizeValue) + px;
+  font-size: ($sizeValue / 16) + rem;
+}
+// 2. FONT WEIGHTS VARS [UNIVERSAL]
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-medium-x: 600;
+$fw-bold: 700;
+$fw-bold-x: 800;
+$fw-black: 900;
+// 3. SELECTION COLOR DECLARATION [UNIVERSAL] : https://css-tricks.com/almanac/selectors/s/selection
+*::-moz-selection,
+*::selection {
+  color: white;
+  background-color: black;
+}
+// 4. MEDIA QUERIES VARS [UNIVERSAL]
+// Check this link for more information: http://v4-alpha.getbootstrap.com/layout/overview/#responsive-breakpoints
+// 36rem = 576px
+// 48rem = 768px
+// 62rem = 992px
+// 75rem = 1200px
+$small: "(max-width: 36rem)";
+$medium: "(max-width: 48rem)";
+$large: "(max-width: 62rem)";
+$xlarge: "(max-width: 75rem)";
+$small__up: "(min-width: 36rem)";
+$medium__up: "(min-width: 48rem)";
+$large__up: "(min-width: 62rem)";
+$xlarge__up: "(min-width: 75rem)";
+// 5. COLOR VARS [UNIVERSAL]
+$gray-AA: #444;
+$gray-AB: #111;
+$gray-AC: #d7d7d7;
+$gray-AD: #777;
+$yellow-AA: #bf8329;
+$yellow-AAA: rgba(#bf8329, .9);
+$yellow-AB: #f8f2e9;
+$yellow-AC: #cdaf87;
+$yellow-AE: #f1dec2;
+$blue-AA: #04254a;
+$blue-AB: #012248;
+$blue-AC: #12355d;
+$blue-ACC: rgba(#12355d, .9);

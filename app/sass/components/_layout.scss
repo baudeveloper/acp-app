@@ -1,0 +1,133 @@
+// LAYOUT.scss
+
+/*
+TABLE OF CONTENTS:
+1. HTML [UNIVERSAL]
+2. BODY [UNIVERSAL]
+3. RESPONSIVE MEDIA [UNIVERSAL]
+4. GRIDS [UNIVERSAL]
+*/
+
+// 1. HTML [UNIVERSAL]
+html {
+  font-size: 16px;
+}
+
+// 2. BODY [UNIVERSAL]
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// 3. RESPONSIVE MEDIA [UNIVERSAL]
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+}
+
+// 4. GRIDS [UNIVERSAL]
+// UNIVERSAL CLASSES
+.site-intro {
+  @include make-col-ready();
+  @include make-col(8);
+  @include make-col-offset(2);
+}
+// SITE SUMMARY [HOME PAGE ONLY]
+.site-summary {
+  &-column {
+    @include make-col-ready();
+    @include make-col(10);
+    @include make-col-offset(1);
+  }
+}
+// SITE FEATURE [HOME PAGE ONLY]
+.site-feature {
+  &-column {
+    @include make-col-ready();
+  }
+  &-column-primary {
+    @include make-col(7);
+  }
+  &-column-secondary {
+    @include make-col(5);
+  }
+}
+// SITE CATEGORY [HOME PAGE ONLY]
+.site-category {
+  &-column {
+    @include make-col-ready();
+  }
+  &-column-primary {
+    @include make-col(6);
+  }
+  &-column-secondary {
+    @include make-col(6);
+  }
+}
+// SITE TESTIMONIAL [HOME PAGE ONLY]
+.site-testimonial {
+  &-column {
+    @include make-col-ready();
+    @include make-col(10);
+    @include make-col-offset(1);
+  }
+}
+// SITE PARTNERS [HOME PAGE ONLY]
+.site-partners {
+  &-column {
+    @include make-col-ready();
+    @include make-col(10);
+    @include make-col-offset(1);
+  }
+}
+// SITE QUOTE [HOME PAGE ONLY]
+.site-quote {
+  &-column {
+    @include make-col-ready();
+    @include make-col(12);
+  }
+}
+// SITE WIDGET [HOME PAGE ONLY]
+.site-widget {
+  &-fcolumn,
+  &-scolumn {
+    @include make-col-ready();
+  }
+  &-fcolumn-primary {
+    @include make-col(8);
+  }
+  &-fcolumn-secondary {
+    @include make-col(4);
+  }
+  &-scolumn-primary {
+    @include make-col(5);
+  }
+  &-scolumn-secondary {
+    @include make-col(7);
+  }
+}
+// SITE FOOTER [UNIVERSAL]
+.site-footer {
+  &-column {
+    @include make-col-ready();
+  }
+  &-column-primary {
+    @include make-col(6);
+  }
+  &-column-secondary {
+    @include make-col(4);
+    @include make-col-offset(2);
+  }
+}
+// SITE HEADER
+.site-header {
+  &-column {
+    @include make-col-ready();
+    @include make-col(12);
+  }
+}

@@ -1,0 +1,48 @@
+nav.navbar.navbar-expand-lg.navbar-light.site-navigation(role="navigation", data-js="primaryMenu")
+  .container
+    a.navbar-brand(href='index.html', role="link")
+      img(src="images/navigation-logo.png", alt="Aligned Capital Partners Inc. logo", role="img")
+      span.sr-only Aligned Capital Partners Inc.
+    button.navbar-toggler.hamburger.hamburger--spring(type='button', data-js='offcanvasBtn', data-toggle='collapse', data-target='#navSc', aria-controls='navSc', aria-expanded='false', aria-label='Toggle navigation')
+      .hamburger-box
+        .hamburger-inner
+      span.sr-only Menu
+    #navSc.site-navigation-lists.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto.secondary-menu(role="list")
+        li.nav-item(role='listitem')
+          a.nav-link(href='investor-information-centre.html', class=(bodyClass === 'investor-information-centre' ? 'active' : ''), role="link") Investor Information Centre
+        li.nav-item(role='listitem')
+          a.nav-link(href='contact-us.html', class=(bodyClass === 'contact-us' ? 'active' : ''), role="link") Contact Us
+        li.nav-item.search(role='listitem')
+          .input-group.hide
+            input(type='text', placeholder='Search for...', aria-label='Search for...')
+            span.input-group-btn
+              button(type='button', data-js="searchBtn")
+                i.fa.fa-search(aria-hidden="true")
+                span.sr-only Search
+      ul.navbar-nav.ml-auto.primary-menu(role="list")
+        li.nav-item.dropdown(class=(category === 'at' ? 'active' : ''), role='listitem')
+          a#navDd.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            | Aligned Thinking
+          .dropdown-menu(aria-labelledby='navDd')
+            a.dropdown-item(href='support-systems.html', class=(bodyClass === 'support-systems' ? 'active' : ''), role="link") Support Systems
+            a.dropdown-item(href='products.html', class=(bodyClass === 'products' ? 'active' : ''), role="link") Products
+            a.dropdown-item(href='aligned-360.html', class=(bodyClass === 'aligned-360' ? 'active' : ''), role="link") Aligned 360
+            a.dropdown-item(href='aligned-one.html', class=(bodyClass === 'aligned-one' ? 'active' : ''), role="link") Aligned One
+        li.nav-item.dropdown(class=(category === 'op' ? 'active' : ''), role='listitem')
+          a#navDd.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            | Our Platform
+          .dropdown-menu(aria-labelledby='navDd')
+            a.dropdown-item(href='advisor-transition.html', class=(bodyClass === 'advisor-transition' ? 'active' : ''), role="link") Advisor Transition
+            a.dropdown-item(href='operations.html', class=(bodyClass === 'operations' ? 'active' : ''), role="link") Operations
+            a.dropdown-item(href='compliance.html', class=(bodyClass === 'compliance' ? 'active' : ''), role="link") Compliance
+            a.dropdown-item(href='finance.html', class=(bodyClass === 'finance' ? 'active' : ''), role="link") Finance
+        li.nav-item.dropdown(class=(category === 'au' ? 'active' : ''), role='listitem')
+          a#navDd.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            | About Us
+          .dropdown-menu(aria-labelledby='navDd')
+            a.dropdown-item(href='our-company.html', class=(bodyClass === 'our-company' ? 'active' : ''), role="link") Our Company
+            a.dropdown-item(href='our-team.html', class=(bodyClass === 'our-team' ? 'active' : ''), role="link") Our Team
+            a.dropdown-item(href='legal-privacy.html', class=(bodyClass === 'legal-privacy' ? 'active' : ''), role="link") Legal &amp; Privacy
+        li.nav-item(role='listitem')
+          a.btn-advisor-access(href='advisor-access.html', class=(bodyClass === 'advisor-access' ? 'active' : ''), role="link") Advisor Access

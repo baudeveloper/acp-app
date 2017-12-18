@@ -1,0 +1,279 @@
+// STATE.scss
+
+/*
+TABLE OF CONTENTS:
+1. BUTTONS [UNIVERSAL]
+2. BUTTONS [HOME PAGE ONLY]
+3. BUTTONS [NAVIGATION]
+4. UNIVERSAL CLASSES
+5. NAVIGATION
+*/
+
+// 1. BUTTONS [UNIVERSAL] : WHITE OUTLINE
+.btn-outline-yellow {
+  color: $yellow-AA;
+  border-color: $yellow-AA;
+  min-width: 10rem;
+}
+.btn-outline-white {
+  color: $white;
+  border-color: $white;
+  min-width: 10rem;
+}
+
+// 2. BUTTONS [HOME PAGE ONLY]
+// SITE FEATURE
+.site-feature {
+  a {
+    @extend .btn;
+    @extend .btn-outline-yellow;
+    &:hover,
+    &:focus {
+      color: $white;
+      background: $yellow-AA;
+    }
+  }
+}
+// SITE CALLOUT
+.site-callout {
+  a {
+    @extend .btn;
+    @extend .btn-outline-white;
+    &:hover,
+    &:focus {
+      color: $yellow-AA;
+      background: $white;
+    }
+  }
+}
+// SITE QUOTE
+.site-quote {
+  a {
+    @extend .btn;
+    @extend .btn-primary;
+  }
+}
+// SITE JOIN
+.site-join {
+  a {
+    @extend .btn;
+    @extend .btn-primary;
+  }
+}
+
+// 3. BUTTONS [PRIMARY NAVIGATION]
+.site-navigation {
+  .btn-advisor-access {
+    @extend .btn;
+    @extend .btn-primary;
+  }
+}
+
+// 4. UNIVERSAL CLASSES
+.site-intro {
+  text-align: center;
+  h2 {
+    margin-bottom: 2.5rem;
+    @include font-size(30);
+    color: $blue-AC;
+    line-height: 1.25;
+    font-family: "Overpass-Light";
+    span {
+      font-family: "Overpass-SemiBold";
+    }
+  }
+}
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+// 5. NAVIGATION
+// SITE NAVIGATION PRIMARY [UNIVERSAL]
+.collapsing {
+  -webkit-transition: none;
+  transition: none;
+  display: none;
+}
+.site-navigation {
+  position: fixed;
+  z-index: 1030;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 100%;
+  padding-top: 3rem;
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
+  .navbar-toggler {
+    display: flex;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  .primary-menu {
+    .nav-link {
+      @include font-size(18);
+      font-family: "Overpass-SemiBold";
+    }
+    .dropdown-toggle {
+      &:after {
+        border: none;
+        content: "\f107";
+        vertical-align: baseline;
+        font-family: "fontawesome";
+      }
+    }
+    .dropdown-item {
+      @include font-size(16);
+      font-family: "BarlowSemiCondensed-SemiBold";
+    }
+    .btn-advisor-access {
+      @include font-size(12);
+      height: 2rem;
+      text-transform: uppercase;
+      font-family: "Overpass-Bold";
+    }
+  }
+  .secondary-menu {
+    .nav-link {
+      @include font-size(12);
+      color: $blue-AB;
+      padding: 0 0.9375rem;
+      text-transform: uppercase;
+      font-family: "Overpass-SemiBold";
+      border-right: 1px solid $yellow-AA;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .nav-item:last-of-type {
+      .nav-link {
+        padding-right: 0;
+        border-right: none;
+      }
+    }
+  }
+  @media #{$large__up} {
+    &-lists {
+      display: flex;
+      flex-direction: column;
+    }
+    .container {
+      position: relative;
+    }
+    .navbar-toggler {
+      display: none;
+    }
+    .primary-menu {
+      align-items: center;
+      justify-content: right;
+      .nav-link {
+        padding-left: 0;
+        padding-right: 2rem;
+      }
+      .dropdown-menu {
+        border: none;
+        border-radius: 0;
+        &:before {
+          position: absolute;
+          top: -10px;
+          left: 10px;
+          width: 0;
+          height: 0;
+          content: '';
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 10px solid $yellow-AA;
+        }
+      }
+    }
+    .secondary-menu {
+      position: absolute;
+      top: -1.5rem;
+      right: 1rem;
+      justify-content: right;
+      .nav-link {
+        display: inline-block;
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+      }
+    }
+    .search {
+      .input-group {
+        height: 100%;
+      }
+      .hide {
+        input {
+          display: none;
+        }
+      }
+      input {
+        @include font-size(12);
+        outline: none;
+        border: none;
+        background: none;
+        -webkit-appearance: none;
+        height: auto;
+        padding: 0;
+        margin-left: 0.9375rem;
+        color: $blue-AB;
+        text-transform: uppercase;
+        font-family: "Overpass-SemiBold";
+        &::-webkit-input-placeholder {
+          color: $blue-AB;
+        }
+        &::-moz-placeholder {
+          color: $blue-AB;
+          opacity: 1;
+        }
+        &:-ms-input-placeholder {
+          color: $blue-AB;
+        }
+        &:-moz-placeholder {
+          color: $blue-AB;
+          opacity: 1;
+        }
+      }
+      button {
+        @include font-size(12);
+        color: $blue-AB;
+        margin-left: 0.9375rem;
+        padding: 0;
+        outline: none;
+        border: none;
+        background: none;
+        -webkit-appearance: none;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+// NAV: SCROLLED
+.site-navigation.scrolled {
+  background: rgba(255,255,255,1);
+  box-shadow: 0px 10px 15px -2.5px rgba(0,0,0,0.1);
+  @media #{$large__up} {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    .navbar-brand {
+      padding-top: 0;
+      padding-bottom: 0;
+      img {
+        max-width: 180px;
+      }
+    }
+    .secondary-menu {
+      position: relative;
+      right: auto;
+      top: auto;
+      align-self: flex-end;
+    }
+  }
+}

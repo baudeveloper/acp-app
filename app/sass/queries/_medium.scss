@@ -1,0 +1,290 @@
+// MEDIA QUERY (MEDIUM SCREENS ONLY)
+// Check this link for more information: http://v4-alpha.getbootstrap.com/layout/overview/#responsive-breakpoints
+// 48rem = 768px
+
+/*
+TABLE OF CONTENTS:
+  1. CAROUSELS:
+      SITE SLIDER [MODULE: CAROUSEL FOR HOME PAGE ONLY]
+      SITE CATEGORY [MODULE: CAROUSEL FOR HOME PAGE ONLY]
+  2. SITE HOME PAGE:
+      SITE SUMMARY [HOME PAGE ONLY]
+      SITE FEATURE [HOME PAGE ONLY]
+      SITE CALLOUT [HOME PAGE ONLY]
+      SITE CATEGORY [HOME PAGE ONLY]
+      SITE TESTIMONIAL [HOME PAGE ONLY]
+      SITE PARTNERS [HOME PAGE ONLY]
+      SITE QUOTE [HOME PAGE ONLY]
+  3. SITE COMPONENTS:
+      SITE WIDGET [UNIVERSAL]
+      SITE FOOTER [UNIVERSAL]
+      SITE NAVIGATION [UNIVERSAL]
+      SITE HEADER [UNIVERSAL]
+      SITE MAIN [UNIVERSAL]
+  4. UNIVERSAL CLASSES
+  5. SITE PAGES [COMPONENTS]
+*/
+
+// 1. CAROUSELS:
+// SITE SLIDER [MODULE: CAROUSEL FOR HOME PAGE ONLY]
+.carousel-slider {
+  height: 20rem;
+  .carousel-item {
+    background-position: center right;
+  }
+  .carousel-caption {
+    padding: 5rem 1.5rem 0;
+    left: auto;
+    right: auto;
+    max-width: 420px;
+    &-highlighter {
+      display: inline-block;
+    }
+  }
+}
+// SITE CATEGORY [MODULE: CAROUSEL FOR HOME PAGE ONLY]
+.carousel-category {
+  .carousel-navigation {
+    display: block;
+  }
+  .carousel-control {
+    z-index: 100;
+    color: $yellow-AA;
+  }
+  .carousel-indicators {
+    padding: 0;
+  }
+  .carousel-list-item {
+    padding: 1rem 2rem;
+    &:before {
+      display: none;
+    }
+    &:after {
+      display: none;
+    }
+    &.active {
+      &:before {
+        display: none;
+      }
+    }
+    &:not(.active) {
+      display: none;
+    }
+  }
+}
+
+// 2. SITE HOME PAGE:
+// SITE SUMMARY [HOME PAGE ONLY]
+.site-summary {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  &-column {
+    @include make-col(12);
+    @include make-col-offset(0);
+  }
+  h2 {
+    @include font-size(24);
+    margin-bottom: 1rem;
+  }
+}
+// SITE FEATURE [HOME PAGE ONLY]
+.site-feature {
+  padding-top: 0;
+  padding-bottom: 2rem;
+  &-column-primary {
+    @include make-col(12);
+  }
+  &-column-secondary {
+    @include make-col(12);
+  }
+  img {
+    margin-bottom: 1rem;
+  }
+}
+// SITE CALLOUT [HOME PAGE ONLY]
+.site-callout {
+  height: 25rem;
+  h2 {
+    @include font-size(50);
+  }
+  h3 {
+    @include font-size(40);
+  }
+  span {
+    @include font-size(20);
+  }
+}
+// SITE CATEGORY [HOME PAGE ONLY]
+.site-category {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  &-column-primary,
+  &-column-secondary {
+    @include make-col(12);
+  }
+}
+// SITE TESTIMONIAL [HOME PAGE ONLY]
+.site-testimonial {
+  img {
+    max-width: 150px;
+    margin-bottom: 1rem;
+  }
+  &-summary {
+    @include font-size(20);
+  }
+}
+// SITE PARTNERS [HOME PAGE ONLY]
+.site-partners {
+  padding-top: 2rem;
+  padding-bottom: 1.375rem;
+  &-column {
+    @include make-col(12);
+    @include make-col-offset(0);
+  }
+  img {
+    margin: 0;
+    padding: 1rem 1rem 0 0;
+  }
+  ul {
+    li {
+      &:not(.primary) {
+        flex-basis: 50%;
+      }
+      &.primary {
+        flex-basis: 50%;
+      }
+      &:last-child {
+        img {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+// SITE QUOTE [HOME PAGE ONLY]
+.site-quote {
+  .container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  &:after {
+    left: 0;
+    width: 100%;
+    background-size: cover;
+  }
+  &:before {
+    width: 100%;
+    background-size: cover;
+  }
+  h2 {
+    margin-bottom: 1rem;
+    @include font-size(42);
+  }
+  a {
+    min-width: auto;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+  }
+}
+// SITE JOIN [HOME PAGE ONLY]
+.site-join {
+  a {
+    top: -3.125rem;
+    left: 1rem;
+    right: 1rem;
+    margin: auto;
+    width: auto;
+    @include font-size(16);
+  }
+}
+
+// 3. SITE COMPONENTS:
+// SITE WIDGET [UNIVERSAL]
+.site-widget {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  &-fcolumn-primary,
+  &-fcolumn-secondary {
+    @include make-col(12);
+  }
+  ul {
+    margin: 0 0 1rem;
+  }
+}
+// SITE FOOTER [UNIVERSAL]
+.site-footer {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  &-column-primary,
+  &-column-secondary {
+    @include make-col(12);
+    @include make-col-offset(0);
+  }
+  &-column-secondary {
+    text-align: left;
+    margin-top: 1rem;
+  }
+}
+// SITE NAVIGATION PRIMARY [UNIVERSAL]
+.site-navigation {
+  &-lists {
+    padding-top: 4.1rem;
+  }
+  .navbar-brand {
+    img {
+      max-width: 150px;
+    }
+  }
+}
+// SITE HEADER [UNIVERSAL]
+.site-header {
+  min-height: 10rem;
+  &-title {
+    @include font-size(28);
+  }
+  span {
+    @include font-size(16);
+  }
+  &.site-header-bg {
+    .site-header-title {
+      margin-top: 6rem;
+      margin-bottom: 0;
+    }
+  }
+}
+// SITE MAIN [UNIVERSAL]
+.site-main {
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+
+// 4. UNIVERSAL CLASSES
+.site-intro {
+  @include make-col(12);
+  @include make-col-offset(0);
+  h2 {
+    @include font-size(24);
+    margin-bottom: 1.5rem;
+  }
+}
+
+// 5. SITE PAGES [COMPONENTS]
+// SUPPORT SYSTEMS
+.support-systems {
+  .ss-list {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    li {
+      margin: auto 0 1.25rem;
+      padding: 1rem;
+    }
+  }
+}
+// OUR TEAM
+.our-team {
+  .ot-list {
+    li {
+      width: 100%;
+    }
+  }
+}
