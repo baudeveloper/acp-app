@@ -83,7 +83,7 @@ TABLE OF CONTENTS:
     @include make-col-offset(0);
   }
   h2 {
-    @include font-size(24);
+    @include font-size(18);
     margin-bottom: 1rem;
   }
 }
@@ -96,6 +96,9 @@ TABLE OF CONTENTS:
   }
   &-column-secondary {
     @include make-col(12);
+  }
+  &-wrap {
+    text-align: center;
   }
   img {
     margin-bottom: 1rem;
@@ -118,13 +121,20 @@ TABLE OF CONTENTS:
 .site-category {
   padding-top: 3rem;
   padding-bottom: 3rem;
+  background-color: $yellow-AB;
   &-column-primary,
   &-column-secondary {
     @include make-col(12);
   }
+  .carousel-list-item.active {
+    background-color: $white;
+  }
 }
 // SITE TESTIMONIAL [HOME PAGE ONLY]
 .site-testimonial {
+  &-wrap {
+    text-align: center;
+  }
   img {
     max-width: 150px;
     margin-bottom: 1rem;
@@ -143,7 +153,8 @@ TABLE OF CONTENTS:
   }
   img {
     margin: 0;
-    padding: 1rem 1rem 0 0;
+    padding: 1rem;
+    // padding: 1rem 1rem 0 0;
   }
   ul {
     li {
@@ -180,14 +191,22 @@ TABLE OF CONTENTS:
     margin-bottom: 1rem;
     @include font-size(42);
   }
+  span {
+    display: block;
+  }
+  p {
+    @include font-size(16);
+  }
   a {
     min-width: auto;
     padding-top: .75rem;
     padding-bottom: .75rem;
+    @include font-size(16);
   }
 }
 // SITE JOIN [HOME PAGE ONLY]
 .site-join {
+  text-align: center;
   a {
     top: -3.125rem;
     left: 1rem;
@@ -263,7 +282,7 @@ TABLE OF CONTENTS:
   @include make-col(12);
   @include make-col-offset(0);
   h2 {
-    @include font-size(24);
+    @include font-size(18);
     margin-bottom: 1.5rem;
   }
 }
