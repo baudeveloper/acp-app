@@ -4,13 +4,13 @@
 
 /*
 TABLE OF CONTENTS:
-1. SITE SLIDER [HOME PAGE ONLY]
-2. SITE CALLOUT [HOME PAGE ONLY]
-3. SITE NAVIGATION PRIMARY [UNIVERSAL]
+1. SITE SLIDER
+2. SITE CALLOUT
+3. SITE NAVIGATION
 4. SITE COMPONENTS
 */
 
-// 1. SITE SLIDER [HOME PAGE ONLY]
+// 1. SITE SLIDER
 .site-slider {
   .carousel-caption {
     position: relative;
@@ -43,7 +43,7 @@ TABLE OF CONTENTS:
   }
 }
 
-// 2. SITE CALLOUT [HOME PAGE ONLY]
+// 2. SITE CALLOUT
 .site-callout {
   height: 20rem;
   h2 {
@@ -57,20 +57,20 @@ TABLE OF CONTENTS:
   }
 }
 
-// 3. SITE NAVIGATION PRIMARY [UNIVERSAL]
+// 3. SITE NAVIGATION
 .site-navigation {
-  &-lists {
-    padding-top: 3.6rem;
-  }
   .navbar-brand {
+    max-width: 10rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
     img {
-      max-width: 120px;
+      max-width: 7.5rem;
     }
   }
 }
 
 // 4. SITE COMPONENTS:
-// SITE WIDGET [UNIVERSAL]
+// SITE WIDGET
 .site-widget {
   &-fcolumn-primary {
     display: none;

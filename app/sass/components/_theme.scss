@@ -4,8 +4,7 @@
 TABLE OF CONTENTS:
 1. HOME PAGE
 2. SITE COMPONENTS
-4. SITE
-5. SITE PAGES [COMPONENTS]
+3. SITE PAGES [COMPONENTS]
 */
 
 // 1. HOME PAGE
@@ -380,43 +379,31 @@ TABLE OF CONTENTS:
 }
 
 // 2. SITE COMPONENTS
-// SITE [UNIVERSAL]
-// .site {
-//   transform: translate3d(0, 0, 0);
-//   transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
-// }
-// OFFCANVAS [UNIVERSAL]
-// .offcanvas {
-//   .site {
-//     transform: translate3d(-15rem, 0, 0);
-//   }
-//   @media #{$large__up} {
-//     .site {
-//       transform: translate3d(0, 0, 0);
-//     }
-//   }
-// }
 // SITE HEADER
 .site-header {
   display: flex;
   align-items: flex-end;
   min-height: 19.5rem;
   height: auto;
+  padding-top: 10rem;
   text-align: center;
   border-bottom: 1px solid $gray-AC;
   background: $gray-AD url("../images/header-pattern.png") repeat;
-  span {
-    color: $gray-AD;
-    @include font-size(16);
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-    display: block;
+  &-title {
+    @include font-size(46);
+    line-height: 1;
+    color: $yellow-AA;
+    text-transform: capitalize;
     font-family: "Overpass-SemiBold";
   }
-  &-title {
-    color: $yellow-AA;
-    @include font-size(46);
-    text-transform: capitalize;
+  span {
+    @include font-size(16);
+    line-height: inherit;
+    display: block;
+    color: $gray-AD;
+    margin-bottom: .5rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
     font-family: "Overpass-SemiBold";
   }
   &.site-header-no-bg {
@@ -424,12 +411,12 @@ TABLE OF CONTENTS:
       margin-bottom: 4rem;
     }
   }
-  &.site-header-bg {
-    .site-header-title {
-      margin-top: 10rem;
-      margin-bottom: -2rem;
-    }
-  }
+  // &.site-header-bg {
+  //   .site-header-title {
+  //     margin-top: 10rem;
+  //     margin-bottom: -2rem;
+  //   }
+  // }
 }
 // SITE MAIN
 .site-main {
@@ -474,8 +461,24 @@ TABLE OF CONTENTS:
     }
   }
 }
+// SITE
+// .site {
+//   transform: translate3d(0, 0, 0);
+//   transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+// }
+// OFFCANVAS
+// .offcanvas {
+//   .site {
+//     transform: translate3d(-15rem, 0, 0);
+//   }
+//   @media #{$large__up} {
+//     .site {
+//       transform: translate3d(0, 0, 0);
+//     }
+//   }
+// }
 
-// 5. SITE PAGES [COMPONENTS]
+// 3. SITE PAGES
 // SUPPORT SYSTEMS
 .support-systems {
   .ss-list {
@@ -497,10 +500,12 @@ TABLE OF CONTENTS:
     }
   }
   @media #{$medium__up} {
-    li {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    .ss-list {
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
     }
   }
 }

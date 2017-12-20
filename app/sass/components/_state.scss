@@ -2,14 +2,13 @@
 
 /*
 TABLE OF CONTENTS:
-1. BUTTONS [UNIVERSAL]
-2. BUTTONS [HOME PAGE ONLY]
-3. BUTTONS [NAVIGATION]
-4. UNIVERSAL CLASSES
-5. NAVIGATION
+1. BUTTONS : UNIVERSAL
+2. BUTTONS
+3. UNIVERSAL CLASSES
+4. NAVIGATION
 */
 
-// 1. BUTTONS [UNIVERSAL] : WHITE OUTLINE
+// 1. BUTTONS : UNIVERSAL
 .btn-outline-yellow {
   color: $yellow-AA;
   border-color: $yellow-AA;
@@ -21,7 +20,7 @@ TABLE OF CONTENTS:
   min-width: 10rem;
 }
 
-// 2. BUTTONS [HOME PAGE ONLY]
+// 2. BUTTONS
 // SITE FEATURE
 .site-feature {
   a {
@@ -61,15 +60,7 @@ TABLE OF CONTENTS:
   }
 }
 
-// 3. BUTTONS [PRIMARY NAVIGATION]
-.site-navigation {
-  .btn-advisor-access {
-    @extend .btn;
-    @extend .btn-primary;
-  }
-}
-
-// 4. UNIVERSAL CLASSES
+// 3. UNIVERSAL CLASSES
 .site-intro {
   text-align: center;
   h2 {
@@ -89,13 +80,8 @@ TABLE OF CONTENTS:
   top: 0;
 }
 
-// 5. NAVIGATION
-// SITE NAVIGATION PRIMARY [UNIVERSAL]
-.collapsing {
-  -webkit-transition: none;
-  transition: none;
-  display: none;
-}
+// 4. NAVIGATION
+// SITE NAVIGATION
 .site-navigation {
   position: fixed;
   z-index: 1030;
@@ -109,6 +95,10 @@ TABLE OF CONTENTS:
   background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
   background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
+  .btn-advisor-access {
+    @extend .btn;
+    @extend .btn-primary;
+  }
   .navbar-toggler {
     display: flex;
     border: none;
@@ -137,6 +127,9 @@ TABLE OF CONTENTS:
       height: 2rem;
       text-transform: uppercase;
       font-family: "Overpass-Bold";
+    }
+    [aria-expanded="true"]:after {
+      content: "\f106";
     }
   }
   .secondary-menu {
@@ -255,7 +248,7 @@ TABLE OF CONTENTS:
     }
   }
 }
-// NAV: SCROLLED
+// SITE NAVIGATION: SCROLLED
 .site-navigation.scrolled {
   background: rgba(255,255,255,1);
   box-shadow: 0px 10px 15px -2.5px rgba(0,0,0,0.1);

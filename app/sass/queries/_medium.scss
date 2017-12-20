@@ -5,28 +5,28 @@
 /*
 TABLE OF CONTENTS:
   1. CAROUSELS:
-      SITE SLIDER [MODULE: CAROUSEL FOR HOME PAGE ONLY]
-      SITE CATEGORY [MODULE: CAROUSEL FOR HOME PAGE ONLY]
+      SITE SLIDER
+      SITE CATEGORY
   2. SITE HOME PAGE:
-      SITE SUMMARY [HOME PAGE ONLY]
-      SITE FEATURE [HOME PAGE ONLY]
-      SITE CALLOUT [HOME PAGE ONLY]
-      SITE CATEGORY [HOME PAGE ONLY]
-      SITE TESTIMONIAL [HOME PAGE ONLY]
-      SITE PARTNERS [HOME PAGE ONLY]
-      SITE QUOTE [HOME PAGE ONLY]
+      SITE SUMMARY
+      SITE FEATURE
+      SITE CALLOUT
+      SITE CATEGORY
+      SITE TESTIMONIAL
+      SITE PARTNERS
+      SITE QUOTE
   3. SITE COMPONENTS:
-      SITE WIDGET [UNIVERSAL]
-      SITE FOOTER [UNIVERSAL]
-      SITE NAVIGATION [UNIVERSAL]
-      SITE HEADER [UNIVERSAL]
-      SITE MAIN [UNIVERSAL]
+      SITE WIDGET
+      SITE FOOTER
+      SITE NAVIGATION
+      SITE HEADER
+      SITE MAIN
   4. UNIVERSAL CLASSES
-  5. SITE PAGES [COMPONENTS]
+  5. SITE PAGES
 */
 
 // 1. CAROUSELS:
-// SITE SLIDER [MODULE: CAROUSEL FOR HOME PAGE ONLY]
+// SITE SLIDER
 .carousel-slider {
   height: 20rem;
   .carousel-item {
@@ -42,7 +42,7 @@ TABLE OF CONTENTS:
     }
   }
 }
-// SITE CATEGORY [MODULE: CAROUSEL FOR HOME PAGE ONLY]
+// SITE CATEGORY
 .carousel-category {
   .carousel-navigation {
     display: block;
@@ -73,8 +73,8 @@ TABLE OF CONTENTS:
   }
 }
 
-// 2. SITE HOME PAGE:
-// SITE SUMMARY [HOME PAGE ONLY]
+// 2. SITE HOME:
+// SITE SUMMARY
 .site-summary {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -87,7 +87,7 @@ TABLE OF CONTENTS:
     margin-bottom: 1rem;
   }
 }
-// SITE FEATURE [HOME PAGE ONLY]
+// SITE FEATURE
 .site-feature {
   padding-top: 0;
   padding-bottom: 2rem;
@@ -104,7 +104,7 @@ TABLE OF CONTENTS:
     margin-bottom: 1rem;
   }
 }
-// SITE CALLOUT [HOME PAGE ONLY]
+// SITE CALLOUT
 .site-callout {
   height: 25rem;
   h2 {
@@ -117,7 +117,7 @@ TABLE OF CONTENTS:
     @include font-size(20);
   }
 }
-// SITE CATEGORY [HOME PAGE ONLY]
+// SITE CATEGORY
 .site-category {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -130,7 +130,7 @@ TABLE OF CONTENTS:
     background-color: $white;
   }
 }
-// SITE TESTIMONIAL [HOME PAGE ONLY]
+// SITE TESTIMONIAL
 .site-testimonial {
   &-wrap {
     text-align: center;
@@ -143,7 +143,7 @@ TABLE OF CONTENTS:
     @include font-size(20);
   }
 }
-// SITE PARTNERS [HOME PAGE ONLY]
+// SITE PARTNERS
 .site-partners {
   padding-top: 2rem;
   padding-bottom: 1.375rem;
@@ -172,7 +172,7 @@ TABLE OF CONTENTS:
     }
   }
 }
-// SITE QUOTE [HOME PAGE ONLY]
+// SITE QUOTE
 .site-quote {
   .container {
     padding-top: 2rem;
@@ -204,7 +204,7 @@ TABLE OF CONTENTS:
     @include font-size(16);
   }
 }
-// SITE JOIN [HOME PAGE ONLY]
+// SITE JOIN
 .site-join {
   text-align: center;
   a {
@@ -218,7 +218,7 @@ TABLE OF CONTENTS:
 }
 
 // 3. SITE COMPONENTS:
-// SITE WIDGET [UNIVERSAL]
+// SITE WIDGET
 .site-widget {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -230,7 +230,7 @@ TABLE OF CONTENTS:
     margin: 0 0 1rem;
   }
 }
-// SITE FOOTER [UNIVERSAL]
+// SITE FOOTER
 .site-footer {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -244,34 +244,34 @@ TABLE OF CONTENTS:
     margin-top: 1rem;
   }
 }
-// SITE NAVIGATION PRIMARY [UNIVERSAL]
+// SITE NAVIGATION
 .site-navigation {
-  &-lists {
-    padding-top: 4.1rem;
-  }
   .navbar-brand {
     img {
-      max-width: 150px;
+      max-width: 9.375rem;
     }
   }
 }
-// SITE HEADER [UNIVERSAL]
+// SITE HEADER
 .site-header {
-  min-height: 10rem;
+  min-height: 7.5rem;
+  height: auto;
+  margin-top: 3.75rem;
+  padding-top: 2rem;
   &-title {
     @include font-size(28);
   }
   span {
     @include font-size(16);
   }
-  &.site-header-bg {
-    .site-header-title {
-      margin-top: 6rem;
-      margin-bottom: 0;
-    }
-  }
+  // &.site-header-bg {
+  //   .site-header-title {
+  //     margin-top: 6rem;
+  //     margin-bottom: 0;
+  //   }
+  // }
 }
-// SITE MAIN [UNIVERSAL]
+// SITE MAIN
 .site-main {
   padding-top: 2rem;
   padding-bottom: 5rem;
@@ -287,7 +287,7 @@ TABLE OF CONTENTS:
   }
 }
 
-// 5. SITE PAGES [COMPONENTS]
+// 5. SITE PAGES
 // SUPPORT SYSTEMS
 .support-systems {
   .ss-list {

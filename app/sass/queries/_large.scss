@@ -5,25 +5,25 @@
 /*
 TABLE OF CONTENTS:
   1. CAROUSELS:
-      SITE SLIDER [MODULE: CAROUSEL FOR HOME PAGE ONLY]
+      SITE SLIDER
   2. SITE HOME PAGE:
-      SITE FEATURE [HOME PAGE ONLY]
-      SITE CALLOUT [HOME PAGE ONLY]
-      SITE TESTIMONIAL [HOME PAGE ONLY]
+      SITE FEATURE
+      SITE CALLOUT
+      SITE TESTIMONIAL
   3. SITE COMPONENTS:
-      SITE WIDGET [UNIVERSAL]
-      SITE NAVIGATION [UNIVERSAL]
-  4. SITE PAGES [COMPONENTS]
+      SITE WIDGET
+      SITE NAVIGATION
+  4. SITE PAGES
 */
 
 // 1. CAROUSELS:
-// SITE SLIDER [MODULE: CAROUSEL FOR HOME PAGE ONLY]
+// SITE SLIDER
 .carousel-slider {
   .carousel-caption {
     max-width: 720px;
   }
 }
-// SITE CATEGORY [MODULE: CAROUSEL FOR HOME PAGE ONLY]
+// SITE CATEGORY
 .carousel-category {
   .carousel-indicators {
     .carousel-list-item {
@@ -44,12 +44,12 @@ TABLE OF CONTENTS:
 }
 
 // 2. SITE HOME PAGE:
-// SITE FEATURE [HOME PAGE ONLY]
+// SITE FEATURE
 .site-feature {
   padding-top: 3rem;
   padding-bottom: 5rem;
 }
-// SITE CALLOUT [HOME PAGE ONLY]
+// SITE CALLOUT
 .site-callout {
   height: 35rem;
   h2 {
@@ -62,7 +62,7 @@ TABLE OF CONTENTS:
     @include font-size(40);
   }
 }
-// SITE TESTIMONIAL [HOME PAGE ONLY]
+// SITE TESTIMONIAL
 .site-testimonial {
   &-column {
     @include make-col(12);
@@ -82,7 +82,7 @@ TABLE OF CONTENTS:
 }
 
 // 3. SITE COMPONENTS:
-// SITE WIDGET [UNIVERSAL]
+// SITE WIDGET
 .site-widget {
   &-scolumn-primary,
   &-scolumn-secondary {
@@ -98,9 +98,9 @@ TABLE OF CONTENTS:
     margin: 0 2rem 1rem 0;
   }
 }
-// SITE NAVIGATION PRIMARY [UNIVERSAL]
+// SITE NAVIGATION
 .site-navigation {
-  padding-top: .5rem;
+  padding: 1rem;
   background: rgba(255,255,255,0.95);
   box-shadow: 0px 10px 10px 5px rgba(0,0,0,0.1);
   &-lists {
@@ -112,49 +112,97 @@ TABLE OF CONTENTS:
     bottom: 0;
     width: 100%;
     height: 100%;
+    min-height: 100vh;
     content: '';
     flex-basis: 100%;
     flex-grow: 1;
     align-items: center;
     background: $blue-AC;
-    padding-top: 5.5rem;
+    padding-top: 3.75rem;
+    // box-shadow: none;
+    // padding-top: 5.5rem;
     // transform: translate3d(15rem, 0, 0);
-    box-shadow: inset 5px 0px 10px -5px rgba(0,0,0,0.5);
-    // &.show {
-    //   transform: translate3d(0, 0, 0);
-    // }
+    // &.collapse,
+    &.collapsing,
+    &.show {
+      display: flex;
+      flex-direction: column;
+      // transform: translate3d(0, 0, 0);
+    }
   }
   .container {
     max-width: 100%;
   }
   .navbar-brand {
     z-index: 4;
+    padding: 0;
+    img {
+      display: none;
+    }
+    span {
+      position: relative;
+      overflow: visible;
+      clip-path: unset;
+      clip: unset;
+      height: auto;
+    }
   }
   .navbar-toggler {
     z-index: 3;
   }
-  .primary-menu {
+  .primary-menu,
+  .secondary-menu {
     .nav-link {
+      @include font-size(18);
       padding: .75rem 1rem;
+      color: $white;
+      line-height: normal;
+      text-transform: none;
+      font-family: "Overpass-SemiBold";
       border-bottom: 1px solid darken($blue-AA, 5%);
     }
+  }
+  .primary-menu {
+    order: 1;
+    width: 100%;
+    border-top: 1px solid darken($blue-AA, 5%);
     .dropdown-menu {
       border: none;
       border-radius: 0;
-      margin: 1rem;
-      background-color: lighten($blue-AA, 15%);
+      margin: 0;
+      padding: 1rem;
+      background-color: darken($blue-AC, 2%);
+      border-bottom: 1px solid darken($blue-AA, 5%);
+    }
+    .dropdown-item {
+      @include font-size(18);
+      color: $white;
+      padding: .75rem 0;
+      line-height: normal;
+      font-family: "Overpass-SemiBold";
+      border-bottom: 1px solid darken($blue-AA, 5%);
+      &.active {
+        color: $yellow-AA;
+      }
+      &:hover {
+        color: $yellow-AA;
+      }
+      &:first-of-type {
+        padding-top: 0;
+      }
+      &:last-of-type {
+        border: none;
+        padding-bottom: 0;
+      }
     }
     .btn-advisor-access {
-      margin-top: .5rem;
       margin: .75rem 1rem;
     }
   }
   .secondary-menu {
+    order: 2;
+    width: 100%;
     border-top: 1px solid darken($blue-AA, 5%);
-    .nav-link {
-      padding: .75rem 1rem;
-      border-bottom: 1px solid darken($blue-AA, 5%);
-    }
     .search {
       padding: 1rem;
       border-bottom: 1px solid darken($blue-AA, 5%);
@@ -166,15 +214,20 @@ TABLE OF CONTENTS:
     }
   }
 }
-// OFFCANVAS [UNIVERSAL]
+// OFFCANVAS
 .offcanvas {
+  .site-navigation {
+    &-title {
+      color: $white;
+    }
+  }
   .navbar-nav {
     .nav-link {
-      border-right: none;
       @include font-size(18);
       color: $white;
-      text-transform: none;
+      border-right: none;
       line-height: normal;
+      text-transform: none;
       font-family: "Overpass-SemiBold";
       &:hover,
       &:active,
@@ -186,27 +239,30 @@ TABLE OF CONTENTS:
 }
 // SITE HEADER
 .site-header {
-  min-height: 15rem;
+  min-height: 8.5rem;
+  height: auto;
+  margin-top: 3.75rem;
+  padding-top: 2rem;
   &-title {
-    @include font-size(46);
+    @include font-size(32);
   }
   span {
-    @include font-size(16);
+    @include font-size(18);
   }
   &.site-header-no-bg {
     .site-header-title {
       margin-bottom: 1rem;
     }
   }
-  &.site-header-bg {
-    .site-header-title {
-      margin-top: 8rem;
-      margin-bottom: -2rem;
-    }
-  }
+  // &.site-header-bg {
+  //   .site-header-title {
+  //     margin-top: 8rem;
+  //     margin-bottom: -2rem;
+  //   }
+  // }
 }
 
-// 4. SITE PAGES [COMPONENTS]
+// 4. SITE PAGES
 // SUPPORT SYSTEMS
 .support-systems {
   .ss-list {
