@@ -5,7 +5,8 @@ TABLE OF CONTENTS:
 1. HTML [UNIVERSAL]
 2. BODY [UNIVERSAL]
 3. RESPONSIVE MEDIA [UNIVERSAL]
-4. GRIDS [UNIVERSAL]
+4. CONTAINER BREAKPOINTS
+5. GRIDS [UNIVERSAL]
 */
 
 // 1. HTML [UNIVERSAL]
@@ -30,8 +31,28 @@ video {
   max-width: 100%;
 }
 
-// 4. GRIDS [UNIVERSAL]
-// UNIVERSAL CLASSES
+// 4. CONTAINER BREAKPOINTS
+.container {
+  @media #{$small} {
+    width: 100%;
+    max-width: 100%;
+  }
+  @media #{$small__up} {
+    max-width: 36rem;
+  }
+  @media #{$medium__up} {
+    max-width: 48rem;
+  }
+  @media #{$large__up} {
+    max-width: 62rem;
+  }
+  @media #{$xlarge__up} {
+    max-width: 75rem;
+  }
+}
+
+// 5. GRIDS [UNIVERSAL]
+// SITE INTRO
 .site-intro {
   @include make-col-ready();
   @include make-col(8);

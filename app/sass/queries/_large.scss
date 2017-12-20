@@ -20,7 +20,8 @@ TABLE OF CONTENTS:
 // SITE SLIDER
 .carousel-slider {
   .carousel-caption {
-    max-width: 720px;
+    padding: 7rem 1rem 0;
+    max-width: 48rem;
   }
 }
 // SITE CATEGORY
@@ -44,6 +45,12 @@ TABLE OF CONTENTS:
 }
 
 // 2. SITE HOME PAGE:
+// SITE SUMMARY
+.site-summary {
+  h2 {
+    @include font-size(20);
+  }
+}
 // SITE FEATURE
 .site-feature {
   padding-top: 3rem;
@@ -53,10 +60,10 @@ TABLE OF CONTENTS:
 .site-callout {
   height: 35rem;
   h2 {
-    @include font-size(80);
+    @include font-size(60);
   }
   h3 {
-    @include font-size(60);
+    @include font-size(50);
   }
   span {
     @include font-size(40);
