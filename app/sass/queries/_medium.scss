@@ -30,7 +30,9 @@ TABLE OF CONTENTS:
 .carousel-slider {
   height: 20rem;
   .carousel-item {
-    background-position: center right;
+    &-wrap {
+      background-position: center right;
+    }
   }
   .carousel-caption {
     padding: 7rem 1rem 0;
