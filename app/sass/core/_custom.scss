@@ -6,9 +6,10 @@ $primary:                                     $yellow !default;
 // Regular Breakpoint for Bootstrap is: 1200px
 // PSD provided has breakpoint set at: 1110px
 $grid-breakpoints: (
-  xl: 1110px
-) !default;
-$container-max-widths: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
   xl: 1110px
 ) !default;
 
