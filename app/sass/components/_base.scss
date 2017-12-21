@@ -33,15 +33,16 @@ $fw-black: 900;
 // 36rem = 576px
 // 48rem = 768px
 // 62rem = 992px
+// 69.38rem = 1110px (PSD by Pras)
 // 75rem = 1200px
 $small: "(max-width: 36rem)";
 $medium: "(max-width: 48rem)";
 $large: "(max-width: 62rem)";
-$xlarge: "(max-width: 75rem)";
+$xlarge: "(max-width: 69.38rem)";
 $small__up: "(min-width: 36rem)";
 $medium__up: "(min-width: 48rem)";
 $large__up: "(min-width: 62rem)";
-$xlarge__up: "(min-width: 75rem)";
+$xlarge__up: "(min-width: 69.38rem)";
 // 5. COLOR VARS [UNIVERSAL]
 $black: #000;
 $white: #fff;

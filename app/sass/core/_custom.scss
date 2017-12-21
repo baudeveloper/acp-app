@@ -2,9 +2,14 @@
 $yellow:                                      $yellow-AA !default;
 $primary:                                     $yellow !default;
 
-// CONTAINER
+// BREAKPOINTS
+// Regular Breakpoint for Bootstrap is: 1200px
+// PSD provided has breakpoint set at: 1110px
+$grid-breakpoints: (
+  xl: 1110px
+) !default;
 $container-max-widths: (
-  lg:                                         1110px
+  xl: 1110px
 ) !default;
 
 // FONTS
