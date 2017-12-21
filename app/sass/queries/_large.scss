@@ -269,6 +269,13 @@ TABLE OF CONTENTS:
   // }
 }
 
+// 4. UNIVERSAL CLASSES
+.site-intro {
+  h2 {
+    @include font-size(20);
+  }
+}
+
 // 4. SITE PAGES
 // SUPPORT SYSTEMS
 .support-systems {
