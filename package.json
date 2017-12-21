@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "bs": "copyfiles -f node_modules/bootstrap/scss/{_variables.scss,_functions.scss} app/sass",
-    "x-bs": "rimraf app/sass/{_variables.scss,_functions.scss}",
+    "bsx": "rimraf app/sass/{_variables.scss,_functions.scss}",
     "clean": "rimraf dist",
     "f-make": "real-favicon generate faviconDescription.json faviconData.json dist/",
     "f-inject": "real-favicon inject faviconData.json dist dist/*.html",
