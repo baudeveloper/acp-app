@@ -67,6 +67,13 @@ $(function () {
 		$(this).css("background-image", "url(" + $(this).children().attr("src") + ")");
 	});
 
+  // 6. HOME: CATEGORY LINKS INSIDE CAROUSEL
+  // REFERENCE: https://stackoverflow.com/questions/16959476/how-to-go-to-a-url-using-jquery
+	var $catLinks = $("[data-js=\"categoryLinks\"]");
+	$catLinks.on("click", function() {
+		window.location.href = $(this).attr("href");
+	});
+
   // 6. JOIN US ADVISOR BUTTON [HOME]
 	var elements = $(".sticky");
 	Stickyfill.add(elements);
