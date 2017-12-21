@@ -1,0 +1,25 @@
+// COLORS
+$primary: $yellow-AA !default;
+
+// CONTAINER
+$container-max-widths: (
+  lg: 1110px
+) !default;
+
+// FONTS
+$font-family-sans-serif: "Overpass-Regular" !default;
+
+// DROPDOWN
+$dropdown-bg : $yellow-AA !default;
+$dropdown-link-color : $yellow-AE !default;
+$dropdown-link-hover-color : darken($white, 10%) !default;
+$dropdown-link-hover-bg : transparent !default;
+$dropdown-link-active-color : $white !default;
+$dropdown-link-active-bg : transparent !default;
+
+// NAVBAR
+$navbar-light-color : $blue-AB !default;
+$navbar-light-hover-color : darken($blue-AB, 10%) !default;
+$navbar-light-active-color : $yellow-AA !default;
+$navbar-light-disabled-color : rgba($black, .3) !default;
+$navbar-light-toggler-border-color: transparent !default;
